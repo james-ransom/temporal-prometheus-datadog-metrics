@@ -35,3 +35,19 @@ docker run -d  --cgroupns host  \
     --network="[NETWORK_ID]" \
     gcr.io/datadoghq/agent:latest
 ```
+
+
+### Example: 
+```
+docker run -d  --cgroupns host  \
+    --pid host \
+    -v /home/user/conf.yaml:/etc/datadog-agent/conf.d/prometheus.d/conf.yaml:ro \
+    -v /var/run/docker.sock:/var/run/docker.sock:ro \
+    -v /proc/:/host/proc/:ro \
+    -p 8125:8125 -p 8126:8126 \
+    -v /sys/fs/cgroup/:/host/sys/fs/cgroup:ro \
+    -e DD_API_KEY="[DD_API_KEY]" \
+    -e DD_APM_NON_LOCAL_TRAFFIC=true \
+    --network="17d3ef8f14fb" \
+    gcr.io/datadoghq/agent:latest
+```
