@@ -16,8 +16,7 @@ grpcurl -plaintext -d '{"service": "temporal.api.workflowservice.v1.WorkflowServ
 ```
 docker run -d  --cgroupns host  \
     --pid host \
-    -v [FULL_PATH]/datadog.yaml:/etc/datadog-agent/datadog.yaml:ro \
-    -v [FULL_PATH]/datadog/conf.yaml:/etc/datadog-agent/conf.d/prometheus.d/conf.yaml:ro \
+    -v [FULL_PATH]/conf.yaml:/etc/datadog-agent/conf.d/prometheus.d/conf.yaml:ro \
     -v /var/run/docker.sock:/var/run/docker.sock:ro \
     -v /proc/:/host/proc/:ro \
     -p 8125:8125 -p 8126:8126 \
