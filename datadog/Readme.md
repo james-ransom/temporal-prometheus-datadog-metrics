@@ -1,4 +1,4 @@
-## Temporal -> prometheus -> metrics datadog
+## Temporal -> Prometheus -> Metrics Datadog
 
 This is a demo of getting metrics from Temporal over to datadog using prometheus. 
 
