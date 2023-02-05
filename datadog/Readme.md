@@ -11,6 +11,8 @@ grpcurl -plaintext -d '{"service": "temporal.api.workflowservice.v1.WorkflowServ
 
 ## Step 2. Get the network ID 
 
+In the parent directions, you ran `docker network create temporal-network`.  We need to get the network id for this network. 
+
 In this case the id will be 17d3ef8f14fb
 ```
 # docker network ls | grep temp
