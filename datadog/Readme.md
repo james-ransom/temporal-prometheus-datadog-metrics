@@ -4,7 +4,10 @@ This is a demo of getting metrics from Temporal over to datadog using prometheus
 
 
 ## Step 1. Finish steps in Root folder, ensure docker-compose is up
+(brew install grpcurl)
 ```
+docker ps 
+
 grpcurl -plaintext -d '{"service": "temporal.api.workflowservice.v1.WorkflowService"}' 127.0.0.1:7233 grpc.health.v1.Health/Check
 
 ```
