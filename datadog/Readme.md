@@ -56,3 +56,11 @@ docker run -d  --cgroupns host  \
     --network="17d3ef8f14fb" \
     gcr.io/datadoghq/agent:latest
 ```
+
+
+## Step 4.  Ensure your metrics exist on data dog. 
+
+On datadog -> Metrics -> View metrics sidebar
+
+<img src='https://i.imgur.com/riWclWf.png'>
+
