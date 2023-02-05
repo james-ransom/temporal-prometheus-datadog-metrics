@@ -63,4 +63,6 @@ docker run -d  --cgroupns host  \
 On datadog -> Metrics -> View metrics sidebar
 
 <img src='https://i.imgur.com/riWclWf.png'>
+<br>
+<img src='https://i.imgur.com/7YvRw0T.png'>
 
