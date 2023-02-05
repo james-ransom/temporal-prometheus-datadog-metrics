@@ -1,0 +1,57 @@
+## FILE LOCATION: /etc/datadog-agent/conf.d/prometheus.d/
+## All options defined here are available to all instances.
+#
+init_config:
+
+    ## @param service - string - optional
+    ## Attach the tag `service:<SERVICE>` to every metric, event, and service check emitted by this integration.
+    ##
+    ## Additionally, this sets the default `service` for every log source.
+    #
+    # service: <SERVICE>
+
+## Every instance is scheduled independently of the others.
+#
+instances:
+
+  - prometheus_url: http://host.docker.internal:8000/metrics
+    namespace: temporal 
+    metrics:
+      - ack*
+      - acquire*
+      - activity*
+      - buffered*
+      - build*
+      - cache*
+      - child*
+      - cluster*
+      - elasticsearch*
+      - event*
+      - execution*
+      - get*
+      - gomaxprocs{service*
+      - history*
+      - lock*
+      - memo*
+      - memory*
+      - mutable*
+      - namespace*
+      - new*
+      - num*
+      - numshards*
+      - pending*
+      - persistence*
+      - queue*
+      - replication*
+      - request*
+      - restarts{service*
+      - service*
+      - shard*
+      - shardinfo*
+      - sharditem*
+      - signal*
+      - state*
+      - task*
+      - timer*
+      - visibility*
+      - workflow*
