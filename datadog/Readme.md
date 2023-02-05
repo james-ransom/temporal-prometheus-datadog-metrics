@@ -1,4 +1,4 @@
-## Temporal -> Prometheus -> Metrics Datadog
+## 📈 Temporal -> Prometheus -> Metrics Datadog
 
 This is a demo of getting metrics from Temporal over to datadog using prometheus. 
 
@@ -42,7 +42,7 @@ docker run -d  --cgroupns host  \
 ```
 
 
-### Example: 
+### 📈 Example: 
 ```
 docker run -d  --cgroupns host  \
     --pid host \
