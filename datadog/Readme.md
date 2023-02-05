@@ -11,6 +11,15 @@ grpcurl -plaintext -d '{"service": "temporal.api.workflowservice.v1.WorkflowServ
 
 ## Step 2. Get the network ID 
 
+In this case the id will be 17d3ef8f14fb
+```
+# docker network ls | grep temp
+    
+    17d3ef8f14fb  temporal-network  bridge  local
+
+#
+```
+
 
 ## Step 3. Run the docker container to run datadog. 
 ```
