@@ -1,10 +1,13 @@
-## Temporal -> Prometheus -> Metrics Datadog
+## 📈 Temporal -> Prometheus -> Metrics Datadog
 
 This is a demo of getting metrics from Temporal over to datadog using prometheus. 
 
 
 ## Step 1. Finish steps in Root folder, ensure docker-compose is up
+(brew install grpcurl)
 ```
+docker ps 
+
 grpcurl -plaintext -d '{"service": "temporal.api.workflowservice.v1.WorkflowService"}' 127.0.0.1:7233 grpc.health.v1.Health/Check
 
 ```
@@ -39,7 +42,7 @@ docker run -d  --cgroupns host  \
 ```
 
 
-### Example: 
+### 📈 Example: 
 ```
 docker run -d  --cgroupns host  \
     --pid host \
@@ -53,3 +56,13 @@ docker run -d  --cgroupns host  \
     --network="17d3ef8f14fb" \
     gcr.io/datadoghq/agent:latest
 ```
+
+
+## Step 4.  Ensure your metrics exist on data dog. 
+
+On datadog -> Metrics -> View metrics sidebar
+
+<img src='https://i.imgur.com/riWclWf.png'>
+<br>
+<img src='https://i.imgur.com/7YvRw0T.png'>
+
